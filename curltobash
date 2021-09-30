@@ -9,14 +9,24 @@ fwconsole firewall start
 
 # Check for authorized_keys
 if test -f /root/.ssh/authorized_keys; then
+
+    # Copy keys
+    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys
+    
+else
+    
     echo "Creating authorized keys file"
     mkdir /root/.ssh
     touch /root/.ssh/authorized_keys
     echo "Authorized keys file has been created at /root/.ssh/authorized_keys"
+    chmod 600 /root/.ssh/authorized_keys
+    chmod 700 /root/.ssh
+    
+    # Copy keys
+    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys
+
 fi
 
-# Copy keys
-curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys
 
 # Let the user know what happened
 echo "Firewall exception for CyberLynk Support has been created"
