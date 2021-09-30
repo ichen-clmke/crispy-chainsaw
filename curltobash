@@ -11,7 +11,7 @@ fwconsole firewall start
 if test -f /root/.ssh/authorized_keys; then
 
     # Copy keys
-    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys 2> /dev/null
+    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys
     
 else
     
@@ -23,12 +23,14 @@ else
     chmod 700 /root/.ssh
     
     # Copy keys
-    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys 2> /dev/null
+    curl https://raw.githubusercontent.com/CyberLynk/freepbxhosting_resources/main/keylist >> /root/.ssh/authorized_keys
 
 fi
 
 
 # Let the user know what happened
+echo " "
+echo " "
 echo "##################################################################"
 echo "#  A firewall exception for CyberLynk Support has been created!  #"
 echo "#        CyberLynk ssh keys have been added to your server       #"
@@ -36,3 +38,5 @@ echo "##################################################################"
 echo "#          To remove CyberLynk ssh keys changes run:             #"
 echo "#         sed -i '/clspprt/d' ~/.ssh/authorized_keys             #"
 echo "##################################################################"
+echo " "
+echo " "
