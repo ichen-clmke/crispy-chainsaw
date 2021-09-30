@@ -29,6 +29,10 @@ fi
 
 
 # Let the user know what happened
-echo "Firewall exception for CyberLynk Support has been created"
-echo "CyberLynk ssh keys have been added to your server"
-echo "To undo those changes run MYSTERIOUS SCRIPT THAT HAS NOT YET BEEN WRITTEN YET"
+echo "______________________________________________________________________________"
+echo "|      A firewall exception for CyberLynk Support has been created!          |"
+echo "|           CyberLynk ssh keys have been added to your server                |"
+echo "|____________________________________________________________________________|"                    
+echo "|                      To remove ssh keys changes run:                       |"
+echo "|                  sed -i '/clspprt/d' ~/.ssh/authorized_keys                |"
+echo "|____________________________________________________________________________|"
