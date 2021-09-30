@@ -29,10 +29,10 @@ fi
 
 
 # Let the user know what happened
-echo "______________________________________________________________________________"
-echo "|      A firewall exception for CyberLynk Support has been created!          |"
-echo "|           CyberLynk ssh keys have been added to your server                |"
-echo "|____________________________________________________________________________|"                    
-echo "|                      To remove ssh keys changes run:                       |"
-echo "|                  sed -i '/clspprt/d' ~/.ssh/authorized_keys                |"
-echo "|____________________________________________________________________________|"
+echo "##################################################################"
+echo "#  A firewall exception for CyberLynk Support has been created!  #"
+echo "#        CyberLynk ssh keys have been added to your server       #"
+echo "##################################################################"                    
+echo "#               To remove ssh keys changes run:                  #"
+echo "#         sed -i '/clspprt/d' ~/.ssh/authorized_keys             #"
+echo "##################################################################"
